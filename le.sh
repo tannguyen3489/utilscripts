@@ -4,8 +4,8 @@ echo "Usage(testing): le.sh domain www.domain.com,domain.com /path/to/webdomain/
 echo "Usage(live): le.sh domain www.domain.com,domain.com /path/to/webdomain/files/ -l";
 echo "Usage(renewal - 7 days before expiration automatically): le.sh domain www.domain.com,domain.com /path/to/webdomain/files/ -r";
 echo;
-sw="~/ssl";
-skeys="~/ssl/keys";
+sw="/home/ec2-user/ssl";
+skeys="/home/ec2-user/ssl/keys";
 cd $skeys
 if [[ $1 = "" ]]; then
 	echo "First argument: domain is required!";
