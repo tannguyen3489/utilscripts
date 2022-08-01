@@ -30,7 +30,7 @@ else
 		if [[ ! -d $3.well-known/acme-challenge/ ]]; then
 			mkdir -p $3.well-known/acme-challenge/
 		fi
-		echo `le.pl --key account.key --csr $1.csr --csr-key $1.key --crt $1.crt --domains "$2" --path $3.well-known/acme-challenge/ --generate-missing --unlink`
+		echo `/usr/local/bin/le.pl --key account.key --csr $1.csr --csr-key $1.key --crt $1.crt --domains "$2" --path $3.well-known/acme-challenge/ --generate-missing --unlink`
 		cd $sw
 		exit
 	fi
@@ -47,7 +47,7 @@ else
                 if [[ ! -d $3.well-known/acme-challenge/ ]]; then
                         mkdir -p $3.well-known/acme-challenge/
                 fi
-                echo `le.pl --key account.key --csr $1.csr --csr-key $1.key --crt $1.crt --domains "$2" --path $3.well-known/acme-challenge/ --generate-missing --unlink --live`
+                echo `/usr/local/bin/le.pl --key account.key --csr $1.csr --csr-key $1.key --crt $1.crt --domains "$2" --path $3.well-known/acme-challenge/ --generate-missing --unlink --live`
 		cd $sw
                 exit
         fi
@@ -64,7 +64,7 @@ else
                 if [[ ! -d $3.well-known/acme-challenge/ ]]; then
                         mkdir -p $3.well-known/acme-challenge/
                 fi
-                echo `le.pl --key account.key --csr $1.csr --csr-key $1.key --crt $1.crt --domains "$2" --path $3.well-known/acme-challenge/ --generate-missing --unlink --renew 7 --live`
+                echo `/usr/local/bin/le.pl --key account.key --csr $1.csr --csr-key $1.key --crt $1.crt --domains "$2" --path $3.well-known/acme-challenge/ --generate-missing --unlink --renew 7 --live`
 		cd $sw
                 exit
         fi
